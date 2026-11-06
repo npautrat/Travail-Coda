@@ -1,4 +1,4 @@
-#AIDE EXTERIEUR
+# AIDE EXTERIEUR
 - J'ai déja fait le projet en python ce qui ma aidé à organiser mon code correctement 
 - J'ai appris a utilisé les arrays sur https://www.w3schools.com/c/c_arrays.php
 - Il y a quelque petit easter egg
