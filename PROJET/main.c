@@ -7,11 +7,9 @@ int main()
     srand(time(NULL));
     int random_number = rand() % 100 + 1;
     int br;
-    random_number = 67;
     int found=0;
-    printf("%d\n",random_number);
     int nbr_essaie=1;
-    printf("Le but de ce jeu est que vous trouviez le numéro mystère, le nombre est contenu entre 0 et 100, a vous de jouer !\n\n");
+    printf("\nLe but de ce jeu est que vous trouviez le numéro mystère, le nombre est contenu entre 1 et 100 inclus, a vous de jouer !\n\n");
     
     if (random_number==42)
     {
@@ -61,11 +59,16 @@ int main()
             nbr_essaie++;
             printf("Votre nombre est au dessus du nombre mystère\n");
         }
+        else if (br<=0 || br>=101)
+        {   
+            nbr_essaie++;
+            printf("Le nombre est forcement entre 1 et 100 inclus\n");
+        }
         else 
         {
             nbr_essaie++;
             printf("Votre nombre est en dessous du nombre mystère\n");
         }
     }
-    printf("Voici votre nombre d'essaie: %d\n",nbr_essaie);
+    printf("Voici votre nombre d'essaie: %d\n\n",nbr_essaie);
 }
