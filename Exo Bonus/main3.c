@@ -3,10 +3,14 @@
 #include <stdio.h>
 int main()
 {
-    char n[]="";
-    char p[]="";
+    FILE *a;
+    char n[50]="";
+    char p[50]="";
     printf("Rentre ton nom\n");
-    scanf("%s",n);
+    scanf("%49s",n);
     printf("Rentre ton prénom\n");
-    scanf("%s",p);
+    scanf("%49s",p);
+    a=fopen("prout.txt","w");
+    fprintf(a,"%s %s\n",p,n);
+    return 0;
 }
