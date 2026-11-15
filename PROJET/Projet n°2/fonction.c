@@ -61,7 +61,7 @@ void player_one_round_to_play(char **grille_actually_played, int *grille_played_
     grille_actually_played[case_played_player / 3][case_played_player % 3] = 'X';
     if (is_victory(grille_played_current)!=0)
     {
-        printf("Bien joué vous avez gagné");
+        printf("Bien joué vous avez gagné\n");
         exit(0);
     }
 }
@@ -118,6 +118,7 @@ void poser_pion_bot(char **grille_actually_played, int *grille_played_current, i
 {
     grille_actually_played[index / 3][index % 3] = 'O';
     grille_played_current[index] = 2;
+    printf("L'ordinateur a choisi la case num°%d",index);
     if (is_victory(grille_played_current) == 1)
     {
         printf("L'ordinateur à gagné ");
